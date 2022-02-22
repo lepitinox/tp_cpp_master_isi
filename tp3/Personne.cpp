@@ -24,36 +24,36 @@ Personne::Personne(std::string _nom, std::string _premon, int _age) {
 // Destructor
 
 Personne::~Personne() {
-    std::cout << "pls don't kill me ! \n" << premon << " died." << std::endl;
+    std::cout <<  premon << " " << nom << " died." << std::endl;
 }
 
 // getters
 
-int Personne::Get_age() const {
+int Personne::getAge() const {
     return age;
 }
 
-std::string Personne::Get_premon() const{
+std::string Personne::getPremon() const{
     return premon;
 }
 
-std::string Personne::Get_nom()const {
+std::string Personne::getNom() const {
     return nom;
 }
 
 // setters
 
-int Personne::Set_nom(std::string new_value) {
+int Personne::setNom(std::string new_value) {
     nom = new_value;
     return 0;
 }
 
-int Personne::Set_premon(std::string new_value) {
+int Personne::setPremon(std::string new_value) {
     premon = new_value;
     return 0;
 }
 
-int Personne::Set_age(int new_value) {
+int Personne::setAge(int new_value) {
     age = new_value;
     return 0;
 }
@@ -61,23 +61,23 @@ int Personne::Set_age(int new_value) {
 
 // Overload of <<
 std::ostream & operator<<(std::ostream &prev, const Personne &pp){
-    if (pp.Get_nom().empty()){
+    if (pp.getNom().empty()){
         prev << "Non Def";
         return prev;
     }else{
-    prev <<  pp.Get_premon() << " " << pp.Get_nom() << ", " << pp.Get_age() << " ans";
+    prev << pp.getPremon() << " " << pp.getNom() << ", " << pp.getAge() << " ans";
     return prev;
     }
 }
 Personne& Personne::operator=(const Personne  &from) {
-    premon = from.Get_premon();
-    nom = from.Get_nom();
-    age = from.Get_age();
+    premon = from.getPremon();
+    nom = from.getNom();
+    age = from.getAge();
     return *this;
 }
 
 void Personne::Copy_args(const Personne &a) {
-    premon = a.Get_premon();
-    nom = a.Get_nom();
-    age = a.Get_age();
+    premon = a.getPremon();
+    nom = a.getNom();
+    age = a.getAge();
 }

@@ -7,8 +7,8 @@
 #include "Personne.h"
 #include "vector"
 
-class Etudiant: Personne {
-   std::vector<int> rip_les_notes;
+class Etudiant: public Personne {
+   std::vector<int> noteVect;
 public:
     Etudiant();
     Etudiant(std::vector<int> grades, std::string nom,std::string prenom, int age);

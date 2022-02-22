@@ -8,6 +8,7 @@
 #include "iostream"
 
 class Personne {
+    // Les string  sont de base aloues dynamiquement
     std::string nom;
     std::string premon;
     int age;
@@ -17,16 +18,16 @@ public:
     ~Personne();
 
     // Adding const to be called and not modified
-    std::string Get_nom() const;
-    int Set_nom(std::string new_value);
+    std::string getNom() const;
+    int setNom(std::string new_value);
 
     // Adding const to be called and not modified
-    std::string Get_premon() const;
-    int Set_premon(std::string new_value);
+    std::string getPremon() const;
+    int setPremon(std::string new_value);
 
     // Adding const to be called and not modified
-    int Get_age() const;
-    int Set_age(int new_value);
+    int getAge() const;
+    int setAge(int new_value);
     void Copy_args(const Personne &a);
     // Overload of <<
     Personne& operator=(Personne const &from);
