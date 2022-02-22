@@ -100,6 +100,8 @@ void Personne::Copy_args(const Personne &a) {
 }
 
 int Personne::setex_char(char *newValue) {
-    ex_char = newValue;
+    for (int i = 0; i < (sizeof(newValue)/sizeof(char)); ++i) {
+        ex_char[i] = newValue[i];
+    }
     return 0;
 }
