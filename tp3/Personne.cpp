@@ -19,9 +19,10 @@ Personne::Personne() {
 
 Personne::Personne(std::string _nom, std::string _premon, int _age) {
     ex_char = new char[_nom.size()];
-    for (std::string::size_type i = 0; i <= _nom.size(); i++) {
+    for (int i = 0; i < _nom.size(); ++i){
         ex_char[i] = _nom[i];
     }
+    ex_char[_nom.size()]='\000';
     nom = _nom;
     premon = _premon;
     age = _age;
@@ -47,8 +48,14 @@ std::string Personne::getNom() const {
     return nom;
 }
 
-char* Personne::getex_char() const{
-    return ex_char;
+char * Personne::getex_char() const{
+    int len = nom.size();
+    char * ret = new char[len];
+    for (int i = 0; i < len; ++i) {
+        ret[i] = ex_char[i];
+    }
+    ret[len] = '\000';
+    return ret;
 }
 
 // setters

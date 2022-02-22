@@ -6,6 +6,7 @@
 #define TP_CPP_MASTER_ISI_ETUDIANT_H
 #include "Personne.h"
 #include "vector"
+// c++ donc utilisation de sting et vector
 
 class Etudiant: public Personne {
    std::vector<int> noteVect;

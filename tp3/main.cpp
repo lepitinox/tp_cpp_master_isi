@@ -13,14 +13,17 @@ int main(){
     Personne per2 =  Personne();
     Personne per3 = Personne("Sardou","Michel",69);
 
+    // Exemple with char * instead of basic_string
     std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
-    char * uwu = per1.getex_char();
-    uwu = "mdr";
+    char * temp_to_modify = per1.getex_char();
+    temp_to_modify[0] = '?';
     std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
-    char *  test_ex = "test";
+    char * test_ex = new char[2];
+    test_ex[0]='a';
+    test_ex[1]='b';
     per1.setex_char("test_ex");
     std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
-    test_ex = "OKKK";
+    test_ex[0] = '?';
     std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
 
 

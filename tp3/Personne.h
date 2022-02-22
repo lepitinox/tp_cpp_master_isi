@@ -7,6 +7,7 @@
 #include "string"
 #include "iostream"
 
+// c++ donc utilisation de sting et vector
 class Personne {
     // Les string  sont de base aloues dynamiquement
     char * ex_char;
