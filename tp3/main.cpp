@@ -13,16 +13,30 @@ int main(){
     Personne per2 =  Personne();
     Personne per3 = Personne("Sardou","Michel",69);
 
+    std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
+    char * uwu = per1.getex_char();
+    uwu = "mdr";
+    std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
+    char *  test_ex = "test";
+    per1.setex_char("test_ex");
+    std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
+    test_ex = "OKKK";
+    std::cout << "TEST AVEC CHAR : " << per1.getex_char()<<std::endl;
+
+
     std::string nom_test_1 = per1.getNom();
     std::string nom_test_2 = per1.getNom();
 
     per1.getNom() = std::string("jpp");
+
     nom_test_1 = "jpp";
     std::cout << per1 << std::endl;
+
     // vu que Get_nom a été definie avec cons, on ne peux pas modifier la valeur
     per1.setNom("Michel");
     std::cout << per1 << std::endl;
     std::cout << nom_test_2 << std::endl;
+
     // on utilise bien la ref
 
 

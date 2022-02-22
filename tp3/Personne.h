@@ -9,6 +9,7 @@
 
 class Personne {
     // Les string  sont de base aloues dynamiquement
+    char * ex_char;
     std::string nom;
     std::string premon;
     int age;
@@ -26,6 +27,8 @@ public:
     int setPremon(std::string new_value);
 
     // Adding const to be called and not modified
+    char * getex_char() const;
+    int setex_char(char * newValue);
     int getAge() const;
     int setAge(int new_value);
     void Copy_args(const Personne &a);

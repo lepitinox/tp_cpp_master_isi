@@ -2,12 +2,14 @@
 // Created by adrie on 22/02/2022.
 //
 
+#include <vector>
 #include "Personne.h"
 
 
 // Constructors
 
 Personne::Personne() {
+    ex_char = "";
     nom = "";
     premon = "";
     age = 0;
@@ -16,6 +18,10 @@ Personne::Personne() {
 
 
 Personne::Personne(std::string _nom, std::string _premon, int _age) {
+    ex_char = new char[_nom.size()];
+    for (std::string::size_type i = 0; i <= _nom.size(); i++) {
+        ex_char[i] = _nom[i];
+    }
     nom = _nom;
     premon = _premon;
     age = _age;
@@ -39,6 +45,10 @@ std::string Personne::getPremon() const{
 
 std::string Personne::getNom() const {
     return nom;
+}
+
+char* Personne::getex_char() const{
+    return ex_char;
 }
 
 // setters
@@ -80,4 +90,9 @@ void Personne::Copy_args(const Personne &a) {
     premon = a.getPremon();
     nom = a.getNom();
     age = a.getAge();
+}
+
+int Personne::setex_char(char *newValue) {
+    ex_char = newValue;
+    return 0;
 }
