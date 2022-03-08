@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(tp3)
 
-add_executable(tp_cpp_master_isi main.cpp)
+add_executable(tp_cpp_master_isi main.cpp CBasePile.cpp CBasePile.h CPileFifo.cpp CPileFifo.h CPileLifo.cpp CPileLifo.h)
